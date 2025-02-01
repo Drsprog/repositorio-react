@@ -5,6 +5,6 @@ import {Contador} from './Contador'
 import './styles.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Contador />
+    <Contador value={0} />
   </StrictMode>,
 )

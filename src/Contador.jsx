@@ -1,20 +1,19 @@
-function handleclick(event) {
-    console.log(event)
-}
-
-const Button = () => {
-    return (
-        <button onClick={handleclick}>
-            Soy un boton
-        </button>
-    )
-}
-
-export const Contador = () => {
+import { useState } from "react"
+export const Contador = ({value}) => {
+    
+    const [contador, setContador]=useState(value)
+    
+    const handleclick= () =>{
+        setContador(contador+1)
+    }
+    
     return (
         <>
             <h1>Contador</h1>
-            <Button></Button>
+            <p>{contador}</p>
+            <button onClick={handleclick}>
+            Soy un boton
+            </button>
         </>
     )
 }
